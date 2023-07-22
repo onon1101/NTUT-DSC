@@ -22,6 +22,7 @@ if (location.href === 'https://nportal.ntut.edu.tw/login.do') {
     document.getElementsByTagName("font")[0].remove;
     const errorMsg = document.getElementsByTagName("center")[0].innerText.split('\n')[7];
     if (errorMsg === '「驗證碼」輸入錯誤，請重新輸入。') {
+        document.getElementsByClassName("vsc-initialized")[0].remove();
         location.reload();
     }
     return ;
@@ -37,4 +38,10 @@ window.login1 = function login1() {
 }
 
 document.getElementById("authcode").remove();
+document.getElementsByClassName("authcode co")[0].remove();
+document.getElementsByClassName("title")[2].remove();
 
+ let styleElement = document.createElement("style");
+        styleElement.type = "text/css";
+        styleElement.innerText = ".notifyjs-bootstrap-base {width: 200px;float: left;margin: 10px 0 0 10px;text-align: left;font-size: 16px;}";
+        document.getElementById("wrap").appendChild(styleElement);
