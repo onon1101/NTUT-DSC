@@ -1,4 +1,4 @@
-# delete-security-code
+# delete-security-code in NTUT
 移除北科登入介面的驗證碼
 
 ## How to use
